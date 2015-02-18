@@ -10,13 +10,21 @@ import UIKit
 
 @IBDesignable
 class FloatingButton: UIButton {
-
+ 
+    
+    func setup() {
+        self.tintColor = UIColor.flatWhiteColor()
+        self.backgroundColor = UIColor.flatBlueColor()
+        self.layer.cornerRadius = self.frame.width / 2
+        self.layer.masksToBounds = true
+    }
+    
 }
 
 
 extension UIColor {
     class func flatWhiteColor() -> UIColor {
-        return UIColor(red: 0.1674, green: 0.1674, blue: 0.1674, alpha: 1.0)
+        return UIColor(red: 0.9274, green: 0.9436, blue: 0.95, alpha: 1.0)
     }
     
     class func flatBlackColor() -> UIColor {

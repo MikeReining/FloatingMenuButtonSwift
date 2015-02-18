@@ -9,9 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var floatingButton: FloatingButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        floatingButton.setup()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
