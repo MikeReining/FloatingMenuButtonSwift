@@ -39,6 +39,8 @@ class FloatingMenuController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        closeButton.addTarget(self, action: "closeMenu:", forControlEvents: .TouchUpInside)
+        
         blurredView.frame = view.bounds
         view.addSubview(blurredView)
         view.addSubview(closeButton)
@@ -47,6 +49,10 @@ class FloatingMenuController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         configureButtons()
+    }
+    
+    func closeMenu(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
 }
