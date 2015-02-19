@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    weak var delegate: FloatingMenuControllerDelegate?
+    
     @IBOutlet weak var floatingButton: FloatingButton!
 
     
@@ -16,8 +18,9 @@ class ViewController: UIViewController {
         let controller = FloatingMenuController(fromView: sender as UIButton)
         
         controller.buttonArray = [
-            FloatingButton(image: UIImage(named: "icon-add"), backgroundColor: UIColor.flatRedColor),
-            FloatingButton(image: UIImage(named: "model-008"), backgroundColor: UIColor.flatRedColor)
+            FloatingButton(image: UIImage(named: "icon-add"), backgroundColor: UIColor.flatBlueColor),
+            FloatingButton(image: UIImage(named: "model-008"), backgroundColor: nil),
+            FloatingButton(image: UIImage(named: "model-007"), backgroundColor: nil)
             ]
         
         

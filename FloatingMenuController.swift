@@ -12,6 +12,10 @@ enum Direction {
     case Up
     case Left
 }
+@objc protocol FloatingMenuControllerDelegate: class {
+    optional func floatingMenuController(controller: FloatingMenuController, didTapOnButton button: UIButton, atIndex index: Int)
+    optional func floatingMenuControllerDidCancel(controller: FloatingMenuController)
+}
 
 
 class FloatingMenuController: UIViewController {
@@ -49,7 +53,10 @@ class FloatingMenuController: UIViewController {
         for (index, button) in enumerate(buttonArray) {
             var buttonOffset = buttonPadding * CGFloat (index + 1)
             button.center = buttonOffsetPoint(center, offset: buttonOffset)
+            button.addTarget(self, action: "menuButtonPressed:", forControlEvents: .TouchUpInside)
+            
             buttonOffset += buttonPadding
+            
         }
     }
     
@@ -72,8 +79,14 @@ class FloatingMenuController: UIViewController {
         configureButtons()
     }
     
-    func closeMenu(sender: AnyObject) {
+    func closeMenu(sender: UIButton) {
         dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func menuButtonPressed(sender: UIButton) {
+        if let index = find(buttonArray, sender) {
+            println(index)
+        }
     }
     
 }
