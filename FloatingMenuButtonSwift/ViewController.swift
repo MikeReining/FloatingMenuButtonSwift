@@ -14,7 +14,16 @@ class ViewController: UIViewController {
     
     @IBAction func floatingButtonPressed(sender: AnyObject) {
         let controller = FloatingMenuController(fromView: sender as UIButton)
+        
+        controller.buttonArray = [
+            FloatingButton(image: UIImage(named: "icon-add"), backgroundColor: UIColor.flatRedColor)
+            
+        ]
+        
+        
         presentViewController(controller, animated: true, completion: nil)
+        
+        
     }
     
     override func viewDidLoad() {
