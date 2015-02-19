@@ -17,6 +17,7 @@ class FloatingButton: UIButton {
         self.backgroundColor = UIColor.flatBlueColor()
         self.layer.cornerRadius = self.frame.width / 2
         self.layer.masksToBounds = true
+        self.setBackgroundImage(UIColor.pixelImage(), forState: .Highlighted)
     }
     
 }
@@ -39,5 +40,14 @@ extension UIColor {
         return UIColor(red: 0.9115, green: 0.2994, blue: 0.2335, alpha: 1.0)
     }
     
+    class func pixelImage() -> UIImage {
+        UIGraphicsBeginImageContext(CGSizeMake(1, 1))
+        var context = UIGraphicsGetCurrentContext()
+        CGContextSetFillColorWithColor(context, self.blackColor().CGColor)
+        CGContextFillRect(context, CGRectMake(0, 0, 1, 1))
+        var pixelImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return pixelImage
+    }
     
 }
