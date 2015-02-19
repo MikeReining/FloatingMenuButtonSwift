@@ -47,7 +47,9 @@ class FloatingMenuController: UIViewController {
         closeButton.center = center
         
         for (index, button) in enumerate(buttonArray) {
-            button.center = buttonOffsetPoint(center, offset: buttonPadding)
+            var buttonOffset = buttonPadding * CGFloat (index + 1)
+            button.center = buttonOffsetPoint(center, offset: buttonOffset)
+            buttonOffset += buttonPadding
         }
     }
     

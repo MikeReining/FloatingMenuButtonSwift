@@ -11,10 +11,11 @@ import UIKit
 @IBDesignable
 class FloatingButton: UIButton {
     
-    convenience init(image: UIImage?, backgroundColor: UIColor = UIColor.flatBlueColor) {
+    
+    convenience init(image: UIImage?, backgroundColor: UIColor?) {
         self.init()
         setImage(image, forState: .Normal)
-        setBackgroundImage(backgroundColor.pixelImage, forState: .Normal)
+        self.backgroundColor = backgroundColor
         
         // Configure button
         tintColor = UIColor.whiteColor()

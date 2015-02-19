@@ -16,9 +16,9 @@ class ViewController: UIViewController {
         let controller = FloatingMenuController(fromView: sender as UIButton)
         
         controller.buttonArray = [
-            FloatingButton(image: UIImage(named: "icon-add"), backgroundColor: UIColor.flatRedColor)
-            
-        ]
+            FloatingButton(image: UIImage(named: "icon-add"), backgroundColor: UIColor.flatRedColor),
+            FloatingButton(image: UIImage(named: "model-008"), backgroundColor: UIColor.flatRedColor)
+            ]
         
         
         presentViewController(controller, animated: true, completion: nil)
