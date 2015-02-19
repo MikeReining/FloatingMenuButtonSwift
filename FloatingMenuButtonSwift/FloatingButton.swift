@@ -11,6 +11,23 @@ import UIKit
 @IBDesignable
 class FloatingButton: UIButton {
     
+    convenience init(image: UIImage?, backgroundColor: UIColor = UIColor.flatBlueColor) {
+        self.init()
+        setImage(image, forState: .Normal)
+        setBackgroundImage(backgroundColor.pixelImage, forState: .Normal)
+        
+        // Configure button
+        tintColor = UIColor.whiteColor()
+        layer.cornerRadius = frame.width/2
+        layer.masksToBounds = true
+    }
+    
+    convenience override init() {
+        self.init(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+    }
+    
+    
+    
     func setup() {
         tintColor = UIColor.whiteColor()
         if backgroundImageForState(.Normal) == nil {

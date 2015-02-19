@@ -11,10 +11,15 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var floatingButton: FloatingButton!
 
+    
+    @IBAction func floatingButtonPressed(sender: AnyObject) {
+        let controller = FloatingMenuController(fromView: sender as UIButton)
+        presentViewController(controller, animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         floatingButton.setup()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
