@@ -20,28 +20,29 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inbox" translatesAutoresizingMaskIntoConstraints="NO" id="nAf-hQ-OMj">
                                 <rect key="frame" x="16" y="0.0" width="568" height="600"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nV-Uc-LE8" customClass="FloatingButton" customModule="FloatingMenuButtonSwift" customModuleProvider="target">
-                                <rect key="frame" x="509" y="515" width="65" height="65"/>
-                                <color key="backgroundColor" red="1" green="0.35975499370000003" blue="0.35873021469999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bXp-1s-gA7" customClass="FloatingButton" customModule="FloatingMenuButtonSwift" customModuleProvider="target">
+                                <rect key="frame" x="519" y="525" width="50" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="65" id="Qg6-zL-s0b"/>
-                                    <constraint firstAttribute="width" constant="65" id="bvj-Ki-mtx"/>
+                                    <constraint firstAttribute="width" constant="50" id="6Jl-mn-Use"/>
+                                    <constraint firstAttribute="height" constant="50" id="8k7-CA-E9U"/>
                                 </constraints>
-                                <state key="normal" image="icon-add"/>
+                                <state key="normal" image="icon-add">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="bXp-1s-gA7" secondAttribute="trailing" constant="15" id="3ME-2B-ap1"/>
                             <constraint firstAttribute="bottomMargin" secondItem="nAf-hQ-OMj" secondAttribute="bottom" id="Bad-Tu-tdl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nAf-hQ-OMj" secondAttribute="trailing" id="OC7-Nv-jqy"/>
                             <constraint firstItem="nAf-hQ-OMj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="OR7-JE-pbN"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="2nV-Uc-LE8" secondAttribute="trailing" constant="10" id="YLl-yH-Zsx"/>
                             <constraint firstItem="nAf-hQ-OMj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="dWF-dc-i37"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2nV-Uc-LE8" secondAttribute="bottom" constant="20" id="n9F-kb-UZz"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bXp-1s-gA7" secondAttribute="bottom" constant="25" id="eOm-aZ-Jxd"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="floatingButton" destination="2nV-Uc-LE8" id="cKF-QP-Pwh"/>
+                        <outlet property="floatingButton" destination="bXp-1s-gA7" id="fq9-7q-uKT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

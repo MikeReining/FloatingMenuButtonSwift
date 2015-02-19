@@ -16,6 +16,7 @@
 		2732DF8A1A9506F8009CA0D4 /* Floating-Heads.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2732DF881A9506F8009CA0D4 /* Floating-Heads.xcassets */; };
 		2732DF8B1A9506F8009CA0D4 /* Zooming-Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2732DF891A9506F8009CA0D4 /* Zooming-Icons.xcassets */; };
 		2732DF8D1A953027009CA0D4 /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2732DF8C1A953027009CA0D4 /* FloatingButton.swift */; };
+		27B380211A9662120005B41F /* UIColors+FloatingMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B380201A9662120005B41F /* UIColors+FloatingMenu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,8 @@
 		2732DF881A9506F8009CA0D4 /* Floating-Heads.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Floating-Heads.xcassets"; sourceTree = "<group>"; };
 		2732DF891A9506F8009CA0D4 /* Zooming-Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Zooming-Icons.xcassets"; sourceTree = "<group>"; };
 		2732DF8C1A953027009CA0D4 /* FloatingButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingButton.swift; sourceTree = "<group>"; };
+		2732DF8E1A95B77F009CA0D4 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
+		27B380201A9662120005B41F /* UIColors+FloatingMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColors+FloatingMenu.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +89,9 @@
 				2732DF681A95059A009CA0D4 /* AppDelegate.swift */,
 				2732DF6A1A95059A009CA0D4 /* ViewController.swift */,
 				2732DF6C1A95059A009CA0D4 /* Main.storyboard */,
+				2732DF8E1A95B77F009CA0D4 /* MyPlayground.playground */,
 				2732DF8C1A953027009CA0D4 /* FloatingButton.swift */,
+				27B380201A9662120005B41F /* UIColors+FloatingMenu.swift */,
 				2732DF6F1A95059A009CA0D4 /* Images.xcassets */,
 				2732DF881A9506F8009CA0D4 /* Floating-Heads.xcassets */,
 				2732DF891A9506F8009CA0D4 /* Zooming-Icons.xcassets */,
@@ -225,6 +230,7 @@
 			files = (
 				2732DF6B1A95059A009CA0D4 /* ViewController.swift in Sources */,
 				2732DF691A95059A009CA0D4 /* AppDelegate.swift in Sources */,
+				27B380211A9662120005B41F /* UIColors+FloatingMenu.swift in Sources */,
 				2732DF8D1A953027009CA0D4 /* FloatingButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,6 +425,7 @@
 				2732DF841A95059A009CA0D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2732DF851A95059A009CA0D4 /* Build configuration list for PBXNativeTarget "FloatingMenuButtonSwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -427,6 +434,7 @@
 				2732DF871A95059A009CA0D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
