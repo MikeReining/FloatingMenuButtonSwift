@@ -12,13 +12,14 @@ enum Direction {
     case Up
     case Left
 }
-@objc protocol FloatingMenuControllerDelegate: class {
-    optional func floatingMenuController(controller: FloatingMenuController, didTapOnButton button: UIButton, atIndex index: Int)
-    optional func floatingMenuControllerDidCancel(controller: FloatingMenuController)
+protocol FloatingMenuControllerDelegate: class {
+    func floatingMenuController(controller: FloatingMenuController, didTapOnButton button: UIButton, atIndex index: Int)
+    func floatingMenuControllerDidCancel(controller: FloatingMenuController)
 }
 
 
 class FloatingMenuController: UIViewController {
+    weak var delegate: FloatingMenuControllerDelegate?
     let fromView: UIView
     let blurredView = UIVisualEffectView(effect: UIBlurEffect(style: .Light))
     let closeButton = FloatingButton(image: UIImage(named: "icon-close"), backgroundColor: UIColor.flatRedColor)
@@ -80,12 +81,13 @@ class FloatingMenuController: UIViewController {
     }
     
     func closeMenu(sender: UIButton) {
-        dismissViewControllerAnimated(true, completion: nil)
+        self.delegate?.floatingMenuControllerDidCancel(self)
     }
     
     func menuButtonPressed(sender: UIButton) {
+        
         if let index = find(buttonArray, sender) {
-            println(index)
+            self.delegate?.floatingMenuController(self, didTapOnButton: sender, atIndex: index)
         }
     }
     

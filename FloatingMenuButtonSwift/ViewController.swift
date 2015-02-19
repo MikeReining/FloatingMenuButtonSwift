@@ -8,14 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    weak var delegate: FloatingMenuControllerDelegate?
+class ViewController: UIViewController, FloatingMenuControllerDelegate {
     
     @IBOutlet weak var floatingButton: FloatingButton!
 
     
     @IBAction func floatingButtonPressed(sender: AnyObject) {
         let controller = FloatingMenuController(fromView: sender as UIButton)
+        controller.delegate = self
         
         controller.buttonArray = [
             FloatingButton(image: UIImage(named: "icon-add"), backgroundColor: UIColor.flatBlueColor),
@@ -39,6 +39,13 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func floatingMenuController(controller: FloatingMenuController, didTapOnButton button: UIButton, atIndex index: Int) {
+        println(index)
+    }
+    
+    func floatingMenuControllerDidCancel(controller: FloatingMenuController) {
+        controller.dismissViewControllerAnimated(true, completion: nil)
+    }
 
 }
 
