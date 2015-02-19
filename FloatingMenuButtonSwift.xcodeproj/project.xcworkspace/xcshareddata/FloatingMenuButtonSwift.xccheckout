@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E09AE0F7-F9B5-4CD9-B795-E7913ECB53B8</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FloatingMenuButtonSwift</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F5C423E078834B5DAAE4E796A86B9377CCC5477B</key>
+		<string>https://github.com/MikeReining/FloatingMenuButtonSwift.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>FloatingMenuButtonSwift.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F5C423E078834B5DAAE4E796A86B9377CCC5477B</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/MikeReining/FloatingMenuButtonSwift.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F5C423E078834B5DAAE4E796A86B9377CCC5477B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F5C423E078834B5DAAE4E796A86B9377CCC5477B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>FloatingMenuButtonSwift</string>
+		</dict>
+	</array>
+</dict>
+</plist>
