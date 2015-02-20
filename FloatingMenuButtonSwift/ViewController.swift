@@ -23,6 +23,12 @@ class ViewController: UIViewController, FloatingMenuControllerDelegate {
             FloatingButton(image: UIImage(named: "model-007"), backgroundColor: nil)
             ]
         
+        controller.labelTitles = [
+            "New Contact",
+            "Heidi Hernandez",
+            "Neil Ross",
+        ]
+        
         
         presentViewController(controller, animated: true, completion: nil)
         

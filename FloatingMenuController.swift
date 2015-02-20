@@ -27,6 +27,11 @@ class FloatingMenuController: UIViewController {
     var buttonPadding: CGFloat = 70
     var buttonArray = [UIButton]()
     
+    var labelDirection = Direction.Left
+    var labelTitles = [String]()
+    var buttonLabels = [UILabel]()
+    var labelPadding: CGFloat = 80
+    
     // MARK: UIViewController
     
     init(fromView: UIView) {
@@ -67,6 +72,7 @@ class FloatingMenuController: UIViewController {
                 button.center = buttonOffsetPoint(center, offset: buttonOffset)
                 buttonOffset += buttonPadding
                 button.transform = CGAffineTransformIdentity
+                positionLabels()
             } else {
                 button.center = center
                 button.transform = CGAffineTransformMakeRotation(CGFloat(M_PI_4))
@@ -77,6 +83,20 @@ class FloatingMenuController: UIViewController {
 
         }
     }
+    
+    func labelOffsetPoint(point: CGPoint, offset: CGFloat) -> CGPoint {
+        return CGPoint(x: point.x - offset, y: point.y)
+    }
+    
+    func positionLabels() {
+        for (index, button) in enumerate(buttonArray) {
+            var label = buttonLabels[index]
+            var labelOffset = (labelPadding + label.bounds.width) / 2
+            label.center = labelOffsetPoint(button.center, offset: labelOffset)
+            
+        }
+    }
+    
     
     func animateButtons(toVisible: Bool) {
         positionButtons(!toVisible)
@@ -98,6 +118,22 @@ class FloatingMenuController: UIViewController {
         
         for button in buttonArray {
             view.addSubview(button)
+        }
+        
+        for title in labelTitles {
+            let label = UILabel()
+            label.text = title
+            label.textColor = UIColor.flatBlackColor
+            label.textAlignment = .Center
+            label.font = UIFont(name: "HelveticaNeue-Light", size: 15)
+            label.backgroundColor = UIColor.flatWhiteColor
+            label.sizeToFit()
+            label.bounds.size.height += 8
+            label.bounds.size.width += 20
+            label.layer.cornerRadius = 4
+            label.layer.masksToBounds = true
+            view.addSubview(label)
+            buttonLabels.append(label)
         }
     }
     
