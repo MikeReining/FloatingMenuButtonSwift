@@ -126,7 +126,6 @@ class FloatingMenuController: UIViewController {
             label.textColor = UIColor.flatBlackColor
             label.textAlignment = .Center
             label.font = UIFont(name: "HelveticaNeue-Light", size: 15)
-            label.backgroundColor = UIColor.flatWhiteColor
             label.sizeToFit()
             label.bounds.size.height += 8
             label.bounds.size.width += 20
